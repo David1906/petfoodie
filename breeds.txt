@@ -1,0 +1,473 @@
+{
+ breed: "Blood Hound", 
+weight: "42"
+},
+{
+ breed: "Bull Mastiff", 
+weight: "50"
+},
+{
+ breed: "Deerhound", 
+weight: "42"
+},
+{
+ breed: "Great Dane", 
+weight: "55"
+},
+{
+ breed: "Irish Wolfhound", 
+weight: "55"
+},
+{
+ breed: "Komondo", 
+weight: "50"
+},
+{
+ breed: "Leonberger", 
+weight: "50"
+},
+{
+ breed: "Mastiff", 
+weight: "80"
+},
+{
+ breed: "Neopolitan Mastiff", 
+weight: "62"
+},
+{
+ breed: "Newfoundland", 
+weight: "62"
+},
+{
+ breed: "Otterhound", 
+weight: "43"
+},
+{
+ breed: "Pyrenean Mountain Dog", 
+weight: "48"
+},
+{
+ breed: "Saint Bernard", 
+weight: "70"
+},
+{
+ breed: "LARGE BREEDS", 
+weight: ""
+},
+{
+ breed: "Afgan Hound", 
+weight: "25"
+},
+{
+ breed: "Belgian Shepherd", 
+weight: "29"
+},
+{
+ breed: "Bernese Mountain Dog", 
+weight: "40"
+},
+{
+ breed: "Borzoi", 
+weight: "45"
+},
+{
+ breed: "Bouvier des Flandres", 
+weight: "36"
+},
+{
+ breed: "Boxer", 
+weight: "25"
+},
+{
+ breed: "Briard", 
+weight: "33"
+},
+{
+ breed: "Chesapeake Bay Retriever", 
+weight: "30"
+},
+{
+ breed: "Clumber Spaniel", 
+weight: "30"
+},
+{
+ breed: "Curley Coat Retriever", 
+weight: "33"
+},
+{
+ breed: "Dalmatian", 
+weight: "25"
+},
+{
+ breed: "Doberman", 
+weight: "35"
+},
+{
+ breed: "Dogue de Bordeaux", 
+weight: "50"
+},
+{
+ breed: "English Setter", 
+weight: "26"
+},
+{
+ breed: "Flat-Coated Retriever", 
+weight: "32"
+},
+{
+ breed: "German Shepherd Dog", 
+weight: "36"
+},
+{
+ breed: "German Short Haired Pointer", 
+weight: "28"
+},
+{
+ breed: "German Wire Haired Pointer", 
+weight: "27"
+},
+{
+ breed: "Golden Retriever", 
+weight: "30"
+},
+{
+ breed: "Gordon Setter", 
+weight: "30"
+},
+{
+ breed: "Greyhound", 
+weight: "29"
+},
+{
+ breed: "Hungarian Visla", 
+weight: "25"
+},
+{
+ breed: "Irish Setter", 
+weight: "30"
+},
+{
+ breed: "Irish Water Spaniel", 
+weight: "25"
+},
+{
+ breed: "Italian Spinone", 
+weight: "33"
+},
+{
+ breed: "Japanese Akita", 
+weight: "40"
+},
+{
+ breed: "Labrador Retriever", 
+weight: "30"
+},
+{
+ breed: "Old English Sheepdog", 
+weight: "32"
+},
+{
+ breed: "Poodle (Standard)", 
+weight: "25"
+},
+{
+ breed: "Rhodesian Ridgeback", 
+weight: "35"
+},
+{
+ breed: "Rottweiler", 
+weight: "40"
+},
+{
+ breed: "Saluki", 
+weight: "25"
+},
+{
+ breed: "Samoyed", 
+weight: "26"
+},
+{
+ breed: "Schnauzer (Giant)", 
+weight: "33"
+},
+{
+ breed: "Weimaraner", 
+weight: "35"
+},
+{
+ breed: "MEDIUM BREEDS", 
+weight: ""
+},
+{
+ breed: "Airedale Terrier", 
+weight: "21"
+},
+{
+ breed: "American Cocker Spaniel", 
+weight: "11"
+},
+{
+ breed: "Basset Hound", 
+weight: "22"
+},
+{
+ breed: "Bearded Collie", 
+weight: "23"
+},
+{
+ breed: "Border Collie", 
+weight: "16"
+},
+{
+ breed: "Bull Terrier", 
+weight: "26"
+},
+{
+ breed: "Bulldog", 
+weight: "21"
+},
+{
+ breed: "Chow Chow", 
+weight: "25"
+},
+{
+ breed: "Cocker Spaniel", 
+weight: "13"
+},
+{
+ breed: "Collie ( Rough and Smooth)", 
+weight: "25"
+},
+{
+ breed: "Elkhound", 
+weight: "20"
+},
+{
+ breed: "English Pointer", 
+weight: "25"
+},
+{
+ breed: "English Springer Spaniel", 
+weight: "23"
+},
+{
+ breed: "Field Spaniel", 
+weight: "20"
+},
+{
+ breed: "Finnish Spitz", 
+weight: "13"
+},
+{
+ breed: "Keeshond", 
+weight: "27"
+},
+{
+ breed: "Kerry Blue", 
+weight: "16"
+},
+{
+ breed: "Nova Scotia Duck Tolling Retriever", 
+weight: "19"
+},
+{
+ breed: "Puli (Hungarian Puli)", 
+weight: "12"
+},
+{
+ breed: "Schnauzer (Standard)", 
+weight: "16"
+},
+{
+ breed: "Shar Pei", 
+weight: "20"
+},
+{
+ breed: "Siberian Husky", 
+weight: "21"
+},
+{
+ breed: "Soft Coated Wheaten Terrier", 
+weight: "18"
+},
+{
+ breed: "Staffordshire Bull terrier", 
+weight: "14"
+},
+{
+ breed: "Welsh Springer Spaniel", 
+weight: "18"
+},
+{
+ breed: "SMALL BREEDS", 
+weight: ""
+},
+{
+ breed: "Basenji", 
+weight: "10"
+},
+{
+ breed: "Beagle", 
+weight: "11"
+},
+{
+ breed: "Bedlington Terrier", 
+weight: "9"
+},
+{
+ breed: "Border Terrier", 
+weight: "7"
+},
+{
+ breed: "Boston Terrier", 
+weight: "8"
+},
+{
+ breed: "Cairn terrier", 
+weight: "7"
+},
+{
+ breed: "Cavalier King Charles Spaniel", 
+weight: "7"
+},
+{
+ breed: "Dachshund", 
+weight: "10"
+},
+{
+ breed: "Dandie Dinmont", 
+weight: "9"
+},
+{
+ breed: "Fox Terrier", 
+weight: "7.5"
+},
+{
+ breed: "French Bulldog", 
+weight: "12"
+},
+{
+ breed: "Jack Russell Terrier", 
+weight: "6.5"
+},
+{
+ breed: "King Charles Spaniel", 
+weight: "5"
+},
+{
+ breed: "Lhasa Apso", 
+weight: "7"
+},
+{
+ breed: "Norfolk / Norwich Terrier", 
+weight: "6"
+},
+{
+ breed: "Poodle (Minature)", 
+weight: "12"
+},
+{
+ breed: "Pug", 
+weight: "7"
+},
+{
+ breed: "Schnauzer (Minature)", 
+weight: "6"
+},
+{
+ breed: "Schipperke", 
+weight: "7"
+},
+{
+ breed: "Scottish Terrier", 
+weight: "9"
+},
+{
+ breed: "Sealyham Terrier", 
+weight: "8"
+},
+{
+ breed: "Shetland Sheepdog", 
+weight: "7"
+},
+{
+ breed: "Shiba Inu", 
+weight: "12"
+},
+{
+ breed: "Shih Tzu", 
+weight: "6"
+},
+{
+ breed: "Skye Terrier", 
+weight: "10"
+},
+{
+ breed: "Tibetan Spaniel", 
+weight: "5"
+},
+{
+ breed: "Tibetan Terrier", 
+weight: "10"
+},
+{
+ breed: "Welsh Corgi", 
+weight: "11"
+},
+{
+ breed: "West Highland White Terrier", 
+weight: "8"
+},
+{
+ breed: "Whippet", 
+weight: "12"
+},
+{
+ breed: "TOY BREEDS", 
+weight: ""
+},
+{
+ breed: "Bichon Frise", 
+weight: "5"
+},
+{
+ breed: "Chihuahua", 
+weight: "2"
+},
+{
+ breed: "Chinese Crested", 
+weight: "4"
+},
+{
+ breed: "Dachshund (Minature)", 
+weight: "4.5"
+},
+{
+ breed: "Italian Greyhound", 
+weight: "4"
+},
+{
+ breed: "Maltese", 
+weight: "3"
+},
+{
+ breed: "Papillon", 
+weight: "3"
+},
+{
+ breed: "Pekinese", 
+weight: "4.5"
+},
+{
+ breed: "Pomeranian", 
+weight: "2"
+},
+{
+ breed: "Poodle (Toy)", 
+weight: "3"
+},
+{
+ breed: "Yorkshire Terrier", 
+weight: "2.5"
+}
+
