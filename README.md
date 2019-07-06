@@ -10,6 +10,8 @@ Para poder colocar el codigo dentro del proyecto sigue los pasos listados a cont
 ⋅⋅* Instala el plugin [scripts n styles](https://wordpress.org/plugins/scripts-n-styles/) para poder incrustar el codigo dentro de la pagina wp. 
 
 ![img 1][https://i.imgur.com/0oRcZvA.png]
+<img src="https://i.imgur.com/0oRcZvA.png"
+     alt="Markdown Monster icon"/>
 
 # 2. Insertar codigo html y js en shortcodes
 
