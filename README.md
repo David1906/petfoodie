@@ -37,7 +37,7 @@ Para poder colocar el codigo dentro del proyecto sigue los pasos listados a cont
 * Presiona boton "Update styles".
 
 <img src="https://i.imgur.com/oemDg7w.png"
-     alt="img "4/>
+     alt="img 4"/>
 
 # 5. Usar Shortcode en pagina
 
