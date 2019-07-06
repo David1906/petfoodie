@@ -47,7 +47,7 @@ Para poder colocar el codigo dentro del proyecto sigue los pasos listados a cont
 <img src="https://i.imgur.com/ObHCXtK.png"
      alt="img 5"/>
 
-#Listo! La calculadora deberia estar funcionando dentro de tu pagina.
+# Listo! La calculadora deberia estar funcionando dentro de tu pagina.
 
 <img src="https://i.imgur.com/z8MUwcF.png"
      alt="img 6"/>
