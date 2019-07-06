@@ -8,6 +8,7 @@ Para poder colocar el codigo dentro del proyecto sigue los pasos listados a cont
 # 1. Instalar plugin
 
 * Instala el plugin [scripts n styles](https://wordpress.org/plugins/scripts-n-styles/) para poder incrustar el codigo dentro de la pagina wp. 
+* Activa el plugin.
 
 <img src="https://i.imgur.com/0oRcZvA.png"
      alt="img 1"/>
