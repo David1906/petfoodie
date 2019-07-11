@@ -710,14 +710,33 @@
             updateResult();
         }
 
-        const loadSelect = (idSelect, key, list, value, category) => {
-            list.map( item => {
+        const loadSelect = (idSelect, key, list, value, category, ascendingOrder) => {
+            list.map( item => {                
+                if( item[category] && ascendingOrder ) return;
+
                 const node = document.createElement('option');
                 item[key] && (node.textContent = item[key]);
                 item[value] && (node.value = item[value]);
-                item[category] && (node.textContent = `# ${item[category]}`) && (node.disabled =true);
+                item[category] && (node.textContent = `# ${item[category]}`) && (node.disabled = true);
                 idSelect.appendChild(node);
             });
+
+            if( ascendingOrder && idSelect.length ) sortList(idSelect);
+        }
+
+        function sortList(idSelect) { 
+            arr = new Array(); 
+
+            for(i = 0; i < idSelect.length; i++) { 
+                arr[i] = idSelect.options[i]; 
+            } 
+
+            arr.sort((a,b) => a.text.localeCompare(b.text)); 
+            arr[0].selected = true; 
+
+            for(i = 0; i < idSelect.length; i++) { 
+                idSelect.options[i] = arr[i];
+            }
         }
 
         function roundValuesTo50s(value){
@@ -756,7 +775,25 @@
             return(minDiet===maxDiet? minDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
         }
 
+        function injectFunctions(activity){
+            const copy = [...activity];
 
+            copy[0].eq = x => (32.989 * x) + 77.168;
+            copy[1].eq = x => (42 * x) + 98;
+            copy[2].eq = x => (54 * x) + 126;
+            copy[3].eq = x => (89.571 * x) + 216;
+            return copy;
+        }
+
+         // Load Dogs to list
+        loadSelect(breeds, "breed", info.breeds,null,"category",true);
+        loadSelect(recipes, "name", info.recipes, "id");
+        loadSelect(activity, "name", info.activity, "mPercentage");
+        
+        updateWeight(info.breeds);
+        updateDescription(activity);
+
+        // Add Event Listeners
         breeds.addEventListener("change", handleBreedsChange);
         recipes.addEventListener("change", handleRecipesChange);
         weight.addEventListener("change", handleWeigthChange);
@@ -764,15 +801,15 @@
         activity.addEventListener("change", handleActivityChange);
         roundTo50.addEventListener("change", handleCheckChange);
 
-        // Load Dogs to list
-        loadSelect(breeds, "breed", info.breeds,null,"category");
-        loadSelect(recipes, "name", info.recipes, "id");
-        loadSelect(activity, "name", info.activity, "mPercentage");
-        
-        updateWeight(info.breeds);
-        updateDescription(activity);
         
 
+    //    fetch('http://127.0.0.1:5500/info.json')
+    //    .then(response => response.json())
+    //    .then( myjson => {
+    //         myjson.activity = injectFunctions(myjson.activity);
+    //         info = myjson;
+    //     })
+    //     .catch( error => console.log('Error obteniendo informacion'));
         
     </script>
 </body>
