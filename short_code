@@ -41,7 +41,7 @@
         </form>
     </div>
 
-    <script>
+   <script>
         const info = {
             recipes: [
                 {
@@ -571,6 +571,7 @@
                 }
             ]
         };
+
        
         const breeds = document.getElementById('breeds');
         const recipes = document.getElementById('recipes');
@@ -580,93 +581,142 @@
         const description = document.getElementById('description');
         const result = document.getElementById('result');
         const roundTo50 = document.getElementById('roundTo50');
+
         const updateWeight = (breedsList) => {
             const dogFound = breedsList.filter( dog => dog.breed === breeds.value);
             dogFound.length && (stdWeight.value = dogFound[0].weight + ' Kg');
         }
+
         const updateDescription = (element) => {
             const text = element.options[element.selectedIndex].text;
             const itemFound = info.activity.filter( item => item.name === text);
             itemFound.length && (description.value = itemFound[0].description);
         }
+
         const updateResult = () => {
             result.value = calculateActivity();
         }
+
         const handleBreedsChange = event => {
             updateWeight(info.breeds);
             updateResult();
         }
+
         const handleActivityChange = event => {
             updateDescription(event.target);
             updateResult();
         }
+
         const handleWeigthChange = event => {
             if (event.target.value <= 0) event.target.value = ""
             else{                
                 updateResult();   
             } 
         }
+
         const handleWeigthKeypress = event => {
             if(event.keyCode === 13){
                 console.log(event.keyCode)  
                 weight.blur();
             }
         }
+
         const handleCheckChange = event => {
             updateResult();
         }
+
         const handleRecipesChange = event => {
             updateResult();
         }
-        const loadSelect = (idSelect, key, list, value, category) => {
-            list.map( item => {
+
+        const loadSelect = (idSelect, key, list, value, category, ascendingOrder) => {
+            list.map( item => {                
+                if( item[category] && ascendingOrder ) return;
+
                 const node = document.createElement('option');
                 item[key] && (node.textContent = item[key]);
                 item[value] && (node.value = item[value]);
-                item[category] && (node.textContent = `# ${item[category]}`) && (node.disabled =true);
+                item[category] && (node.textContent = `# ${item[category]}`) && (node.disabled = true);
                 idSelect.appendChild(node);
             });
+
+            if( ascendingOrder && idSelect.length ) sortList(idSelect);
         }
+
+        function sortList(idSelect) { 
+            arr = new Array(); 
+
+            for(i = 0; i < idSelect.length; i++) { 
+                arr[i] = idSelect.options[i]; 
+            } 
+
+            arr.sort((a,b) => a.text.localeCompare(b.text)); 
+            arr[0].selected = true; 
+
+            for(i = 0; i < idSelect.length; i++) { 
+                idSelect.options[i] = arr[i];
+            }
+        }
+
         function roundValuesTo50s(value){
             value -= value % 50;
             if(value < 50 ) {value = 50;}
             return value;
         }
+
         function calculateMinDiet(){
             let result = activity.value * weight.value * 10;
             return Math.round(result);
         }
+
         function calculateMaxDiet(){
             const recipe = info.recipes.find( item => item.id === parseInt(recipes.value));
             const recipeResult = (recipe.grams/recipe.kcal);
+
             const text = activity.options[activity.selectedIndex].text;
             const itemFound = info.activity.find( item => item.name === text);
             const activityResult = itemFound.eq(weight.value);
+
             return Math.round(recipeResult * activityResult);
         }
+
         function calculateActivity(){
             if(weight.value<=0) return "";
+
             let minDiet = calculateMinDiet();
             let maxDiet = calculateMaxDiet();
+
             if(roundTo50.checked){
                 minDiet = roundValuesTo50s(minDiet);
                 maxDiet = roundValuesTo50s(maxDiet);
             }
+
             return(minDiet===maxDiet? minDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
         }
+
+        function injectFunctions(activity){
+            const copy = [...activity];
+
+            copy[0].eq = x => (32.989 * x) + 77.168;
+            copy[1].eq = x => (42 * x) + 98;
+            copy[2].eq = x => (54 * x) + 126;
+            copy[3].eq = x => (89.571 * x) + 216;
+            return copy;
+        }
+
+         // Load Dogs to list
+        loadSelect(breeds, "breed", info.breeds,null,"category",true);
+        loadSelect(recipes, "name", info.recipes, "id");
+        loadSelect(activity, "name", info.activity, "mPercentage");
+        
+        updateWeight(info.breeds);
+        updateDescription(activity);
+
+        // Add Event Listeners
         breeds.addEventListener("change", handleBreedsChange);
         recipes.addEventListener("change", handleRecipesChange);
         weight.addEventListener("change", handleWeigthChange);
         weight.addEventListener("keypress", handleWeigthKeypress);
         activity.addEventListener("change", handleActivityChange);
         roundTo50.addEventListener("change", handleCheckChange);
-        // Load Dogs to list
-        loadSelect(breeds, "breed", info.breeds,null,"category");
-        loadSelect(recipes, "name", info.recipes, "id");
-        loadSelect(activity, "name", info.activity, "mPercentage");
-        
-        updateWeight(info.breeds);
-        updateDescription(activity);
-        
-        
     </script>
