@@ -5,6 +5,8 @@ Para incrustar la calculadora al proyecto es necesario utilizar un plugin de wor
 
 Para poder colocar el codigo dentro del proyecto sigue los pasos listados a continuacion.
 
+#### Agregado orden alfabetico en razas.
+
 # 1. Instalar plugin
 
 * Instala el plugin [scripts n styles](https://wordpress.org/plugins/scripts-n-styles/) para poder incrustar el codigo dentro de la pagina wp. 
