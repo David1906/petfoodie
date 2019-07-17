@@ -809,7 +809,7 @@ function calculateActivity(){
         maxDiet = roundValuesTo50s(maxDiet);
     }
 
-    return(minDiet===maxDiet? minDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
+    return(minDiet >= maxDiet? maxDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
 }
 
 function injectFunctions(activity){
