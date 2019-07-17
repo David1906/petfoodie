@@ -754,7 +754,7 @@ const loadSelect = (idSelect, key, list, value, category, ascendingOrder) => {
         idSelect.appendChild(node);
     });
 
-    if( ascendingOrder && idSelect.length ) (idSelect = sortList(idSelect));
+    if( ascendingOrder && idSelect.length ) sortList(idSelect);
 }
 
 function sortList(idSelect) { 
@@ -766,8 +766,6 @@ function sortList(idSelect) {
     arr.sort((a,b) => a.text.localeCompare(b.text)); 
     arr[0].selected = true; 
 
-    const tmpSelect = document.createElement('select');
-
     while (idSelect.options.length > 0) {
         idSelect.options[0] = null;
     }
@@ -775,10 +773,7 @@ function sortList(idSelect) {
     for(i = 0; i < arr.length; i++) { 
         let node = new Option(arr[i].value, arr[i].value)
         idSelect.options[i] = node;
-        console.log('Item ' + i, arr[i].value)
     }    
-
-    return tmpSelect;
 }
 
 function roundValuesTo50s(value){
