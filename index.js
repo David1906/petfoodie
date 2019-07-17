@@ -1,158 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <style>
-            .form-group{
-                text-align: center;
-            }
-
-            .form-group  p{
-                width: 100%;
-                margin: 1em 0 0;           
-                font-weight: bold;
-                font-size: 1.5em;
-                background-color: rgb(255,192,0);            
-            }
-
-            .form-group select{
-                text-align-last: center;
-            }
-            
-            .form-control{
-                text-align: center;
-                border-radius: 0;
-                outline: none;
-            }
-
-            .form-control.description{
-                height: 38.4%;
-                resize: none;
-                margin-bottom: 1px;
-
-            }
-
-            @media (max-width: 767px) {
-                .form-control.description{
-                    height: 25%;
-                }
-            }
-
-            .group-header {
-                position: relative;
-                height:auto;
-                text-align: center;
-                margin-top: 1rem;
-                color: white;
-                font-size: 2em;
-                font-weight: 100;
-                background-color: #362A03;
-                border-radius: 3px;
-                padding: 0 3em .3rem;
-            }
-
-            .group-header h1{
-                position:absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                background-color: white;
-                color: #362A03;
-                display:inline-block;
-                width: 3em;
-                font-size: .5em;
-                font-weight: bold;
-                padding: .5em 0;            
-                margin: 0;
-                line-height: 2em;
-                border: 1px solid #362A03;
-                border-top-left-radius: 3px;
-                border-bottom-left-radius: 3px;
-            }       
-        </style>
-        <title>Calculadora Petfoodie Ver 0.02</title>
-    </head>
-    <body>
-        <div class="Calculator container">
-            <div class="alert alert-warning text-center mt-3" role="alert">
-                Calculadora Petfoodie
-            </div>
-            <form class="row">
-                <div class="form-group col-12 col-md">
-                    <div class="group-header">
-                        <h1>1</h1>
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="32px" height="32px" viewBox="0 0 551.062 551.062" style="enable-background:new 0 0 551.062 551.062;"
-                                xml:space="preserve" fill="white">
-                            <g>
-                                <path d="M465.19,453.459c14.749,67.688-58.752,82.375-91.127,73.562s-98.41-10.281-98.41-10.281s-66.218,1.469-98.593,10.281
-                                    c-32.375,8.874-105.937-5.875-91.249-73.562s79.438-64.75,97.186-155.999c17.687-91.249,92.718-85.374,92.718-85.374
-                                    s74.847-5.875,92.535,85.374C385.875,388.709,450.502,385.771,465.19,453.459z M343.586,206.15
-                                    c39.841,11.505,83.844-19.951,98.349-70.258c14.504-50.245-5.998-100.307-45.839-111.812
-                                    c-39.842-11.506-83.844,19.951-98.349,70.258C283.243,144.583,303.745,194.645,343.586,206.15z M508.703,187.852
-                                    c-38.372-15.668-85.496,10.894-105.264,59.363c-19.768,48.471-4.712,100.43,33.66,116.035
-                                    c38.372,15.606,85.496-10.894,105.264-59.364C562.131,255.416,547.076,203.519,508.703,187.852z M207.416,206.15
-                                    c39.841-11.506,60.343-61.567,45.839-111.812s-58.568-81.702-98.349-70.196c-39.78,11.505-60.343,61.566-45.839,111.812
-                                    C123.572,186.199,167.575,217.655,207.416,206.15z M113.963,363.25c38.373-15.667,53.428-67.626,33.66-116.035
-                                    s-66.892-75.031-105.264-59.363C3.987,203.519-11.068,255.478,8.7,303.886C28.467,352.356,75.591,378.917,113.963,363.25z"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <p>Raza Del Perro</p>
-                    <select id="breeds" class="form-control"></select>   
-                    <p>Rango De Peso</p>
-                    <input type="text" id="stdWeight" class="form-control" readonly>         
-                    <p>Peso Actual (Kg)</p>
-                    <input type="number" id="weight" class="form-control" placeholder="Introduzca el Peso de su Perro" min=0> 
-                </div>
-                <div class="form-group col-12 col-md">
-                    <div class="group-header">
-                        <h1>2</h1>
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="32px" height="32px" viewBox="0 0 878.426 878.426" style="enable-background:new 0 0 878.426 878.426;"
-                                xml:space="preserve" fill="white">
-                            <g>
-                                <g>
-                                    <path d="M447.025,0c0.5,6.5,0.7,13,0.7,19.5c0,69.4-27,134.6-76.1,183.7l-78.101,78.1c-40.6,40.6-62.9,94.5-62.9,151.9
-                                        s22.3,111.3,62.9,151.9c40.601,40.6,94.5,62.899,151.901,62.899c57.399,0,111.3-22.3,151.899-62.899L675.426,507
-                                        c49.1-49.1,114.3-76.1,183.7-76.1c6.5,0,12.899,0.2,19.3,0.7c-1.9-109.9-44.7-219.101-128.601-303
-                                        C666.025,44.801,556.825,2,447.025,0z"/>
-                                    <path d="M707.226,538.8l-78.1,78.101C580.025,666,514.825,693,445.426,693c-69.401,0-134.601-27-183.701-76.1
-                                        c-49.1-49.101-76.1-114.3-76.1-183.7s27-134.6,76.1-183.7l78.1-78.1c40.601-40.6,62.9-94.5,62.9-151.9c0-6-0.3-12-0.8-18
-                                        c-99.7,8.4-197.1,50.8-273.3,127.1c-171.5,171.5-171.5,449.6,0,621.2c171.5,171.5,449.601,171.5,621.2,0
-                                        c76.2-76.199,118.601-173.5,127.101-273.199c-5.9-0.5-11.8-0.7-17.8-0.7C801.726,475.901,747.726,498.201,707.226,538.8z"/>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                    <p>Nivel De Actividad</p>
-                    <select id="activity" class="form-control"></select> 
-                    <p>Descripcion</p>        
-                    <textarea type="text" id="description" class="form-control description" readonly> </textarea>
-                </div>
-                <div class="form-group col-12 col-md">
-                    <div class="group-header">
-                        <h1>3</h1>
-                        <svg height="32px" viewBox="0 -112 512 512" width="42px" xmlns="http://www.w3.org/2000/svg" fill="white">
-                            <path d="m432.734375 287.066406c-43.710937 0-79.269531-35.558594-79.269531-79.265625 0-.355469.003906-.710937.007812-1.066406h-194.945312c.003906.355469.003906.710937.003906 1.066406 0 43.707031-35.558594 79.265625-79.265625 79.265625s-79.265625-35.558594-79.265625-79.265625c0-26.433593 13.007812-49.886719 32.957031-64.296875-19.953125-14.433594-32.957031-37.886718-32.957031-64.238281 0-43.707031 35.558594-79.265625 79.265625-79.265625 43.710937 0 79.269531 35.558594 79.269531 79.265625 0 .355469-.003906.710937-.007812 1.066406h194.949218c-.007812-.355469-.007812-.710937-.007812-1.066406 0-43.707031 35.558594-79.265625 79.265625-79.265625s79.265625 35.558594 79.265625 79.265625c0 26.429687-13.003906 49.878906-32.945312 64.289063 19.933593 14.433593 32.945312 37.890624 32.945312 64.246093 0 43.707031-35.558594 79.265625-79.265625 79.265625zm0 0"/>
-                        </svg>
-                    </div>
-                    <p>Receta Deseada</p>
-                    <select id="recipes" class="form-control"></select>   
-                    <p>Cantidad Sug. / Dia</p>
-                    <input type="text" id="result" class="form-control" readonly>         
-            
-                    <input type="checkbox" id="roundTo50" checked=true>
-                    <label for="roundTo50">Multiplos de 50</label>
-                </div>       
-            </form>
-        </div>
-
-        <script>
-            const info = {
+const info = {
     recipes: [
         {
             id: 1,
@@ -843,6 +689,12 @@ weight.addEventListener("keypress", handleWeigthKeypress);
 activity.addEventListener("change", handleActivityChange);
 roundTo50.addEventListener("change", handleCheckChange);
 
-        </script>
-    </body>
-</html>
+
+
+//    fetch('http://127.0.0.1:5500/info.json')
+//    .then(response => response.json())
+//    .then( myjson => {
+//         myjson.activity = injectFunctions(myjson.activity);
+//         info = myjson;
+//     })
+//     .catch( error => console.log('Error obteniendo informacion'));
