@@ -5,10 +5,12 @@ Para incrustar la calculadora al proyecto es necesario utilizar un plugin de wor
 
 Para poder colocar el codigo dentro del proyecto sigue los pasos listados a continuacion.
 
-#### Agregado orden alfabetico en razas. :sparkles:
-#### Cambio de iconos a SVG :bento:
-#### Tamaño de codigo optimizado :zap:
-#### Actualizados archivos txt :pencil:
+#### - Reparado bug al ordenar alfabeticamente :bug:
+#### - Agregado orden alfabetico en razas. :sparkles:
+#### - Agregado Pitbull Americano Terrier. :sparkles:
+#### - Cambio de iconos a SVG :bento:
+#### - Tamaño de codigo optimizado :zap:
+#### - Actualizados archivos txt :pencil:
 
 # 1. Instalar plugin
 
