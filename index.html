@@ -678,11 +678,15 @@
                     {
                         breed: "Yorkshire Terrier", 
                         weight: "2 - 3.5"
+                    },
+                    {
+                        breed: "American Pit Bull Terrier",
+                        weight: "16 - 30"
                     }
                 ]
             };
 
-        
+
             const breeds = document.getElementById('breeds');
             const recipes = document.getElementById('recipes');
             const stdWeight = document.getElementById('stdWeight');
@@ -755,7 +759,6 @@
 
             function sortList(idSelect) { 
                 arr = new Array(); 
-
                 for(i = 0; i < idSelect.length; i++) { 
                     arr[i] = idSelect.options[i]; 
                 } 
@@ -763,9 +766,14 @@
                 arr.sort((a,b) => a.text.localeCompare(b.text)); 
                 arr[0].selected = true; 
 
-                for(i = 0; i < idSelect.length; i++) { 
-                    idSelect.options[i] = arr[i];
+                while (idSelect.options.length > 0) {
+                    idSelect.options[0] = null;
                 }
+
+                for(i = 0; i < arr.length; i++) { 
+                    let node = new Option(arr[i].value, arr[i].value)
+                    idSelect.options[i] = node;
+                }    
             }
 
             function roundValuesTo50s(value){
@@ -801,7 +809,7 @@
                     maxDiet = roundValuesTo50s(maxDiet);
                 }
 
-                return(minDiet===maxDiet? minDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
+                return(minDiet >= maxDiet? maxDiet : `${minDiet} a ${maxDiet}`) + ' gramos';
             }
 
             function injectFunctions(activity){
@@ -818,7 +826,7 @@
             loadSelect(breeds, "breed", info.breeds,null,"category",true);
             loadSelect(recipes, "name", info.recipes, "id");
             loadSelect(activity, "name", info.activity, "mPercentage");
-            
+
             updateWeight(info.breeds);
             updateDescription(activity);
 
@@ -830,16 +838,6 @@
             activity.addEventListener("change", handleActivityChange);
             roundTo50.addEventListener("change", handleCheckChange);
 
-            
-
-        //    fetch('http://127.0.0.1:5500/info.json')
-        //    .then(response => response.json())
-        //    .then( myjson => {
-        //         myjson.activity = injectFunctions(myjson.activity);
-        //         info = myjson;
-        //     })
-        //     .catch( error => console.log('Error obteniendo informacion'));
-            
         </script>
     </body>
 </html>
